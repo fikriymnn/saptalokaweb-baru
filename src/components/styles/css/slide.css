@@ -1,0 +1,44 @@
+.slider{
+    height: 170%;
+    margin:auto;
+    display: grid;
+    place-items: center;
+    background-image: url('/images/home/partner/bgpartner.png');
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-track{
+    display: flex;
+    height: 300px;
+    animation: scroll 150s linear infinite;
+}
+
+.slide{
+    height: 200px;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    perspective: 100px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.img-slide{
+    width:100%;
+    transition: 1s;
+
+}
+.img-slide:hover{
+    transform: translateZ(20px);
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-4000px);
+    }
+}
+

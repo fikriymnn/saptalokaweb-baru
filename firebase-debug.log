@@ -1,0 +1,530 @@
+[debug] [2023-11-03T07:27:11.473Z] ----------------------------------------------------------------------
+[debug] [2023-11-03T07:27:11.475Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ramah\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-11-03T07:27:11.476Z] CLI Version:   12.8.0
+[debug] [2023-11-03T07:27:11.476Z] Platform:      win32
+[debug] [2023-11-03T07:27:11.476Z] Node Version:  v18.12.1
+[debug] [2023-11-03T07:27:11.488Z] Time:          Fri Nov 03 2023 14:27:11 GMT+0700 (Waktu Indonesia Barat)
+[debug] [2023-11-03T07:27:11.489Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-03T07:27:11.575Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-03T07:27:11.576Z] > authorizing via signed-in user (saptalokadigital@gmail.com)
+[debug] [2023-11-03T07:27:11.576Z] [iam] checking project saptaloka-web for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-03T07:27:11.581Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions [none]
+[debug] [2023-11-03T07:27:11.582Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:27:11.582Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-03T07:27:12.804Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions 200
+[debug] [2023-11-03T07:27:12.805Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-03T07:27:12.806Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web [none]
+[debug] [2023-11-03T07:27:13.357Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web 200
+[debug] [2023-11-03T07:27:13.357Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web {"projectId":"saptaloka-web","projectNumber":"477492485536","displayName":"saptaloka-web","name":"projects/saptaloka-web","resources":{"hostingSite":"saptaloka-web","storageBucket":"saptaloka-web.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_9cd8501b-d593-4701-9941-8d664fca6d7b"}
+[debug] [2023-11-03T07:27:19.866Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/saptaloka-web/sites pageToken=&pageSize=10
+[debug] [2023-11-03T07:27:21.050Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/saptaloka-web/sites 200
+[debug] [2023-11-03T07:27:21.050Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/saptaloka-web/sites {"sites":[{"name":"projects/saptaloka-web/sites/saptaloka-web","defaultUrl":"https://saptaloka-web.web.app","appId":"1:477492485536:web:68d1410720f1c931c0d8c5","type":"DEFAULT_SITE"},{"name":"projects/saptaloka-web/sites/sataloka","defaultUrl":"https://sataloka.web.app","appId":"1:477492485536:web:f4fe94948ea56ca5c0d8c5","type":"USER_SITE"}]}
+[debug] [2023-11-03T07:27:21.051Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:477492485536:web:68d1410720f1c931c0d8c5/config [none]
+[debug] [2023-11-03T07:27:22.021Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:477492485536:web:68d1410720f1c931c0d8c5/config 200
+[debug] [2023-11-03T07:27:22.021Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:477492485536:web:68d1410720f1c931c0d8c5/config {"projectId":"saptaloka-web","appId":"1:477492485536:web:68d1410720f1c931c0d8c5","storageBucket":"saptaloka-web.appspot.com","locationId":"asia-southeast2","apiKey":"AIzaSyCWVTEr_HpkoVXvzbihhhOkhSzeH0Z_I3M","authDomain":"saptaloka-web.firebaseapp.com","messagingSenderId":"477492485536"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] info  - Creating an optimized production build...
+
+[info] Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+
+[info] Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+[info] warn  - Compiled with warnings
+
+
+[info] ./node_modules/node-fetch/lib/index.js
+Module not found: Can't resolve 'encoding' in 'C:\Users\ramah\Documents\Project_Saptaloka\saptalokaweb\node_modules\node-fetch\lib'
+
+Import trace for requested module:
+./node_modules/node-fetch/lib/index.js
+./node_modules/@firebase/storage/dist/node-esm/index.node.esm.js
+./node_modules/firebase/storage/dist/index.cjs.js
+./src/app/page.js
+
+./node_modules/node-fetch/lib/index.js
+Module not found: Can't resolve 'encoding' in 'C:\Users\ramah\Documents\Project_Saptaloka\saptalokaweb\node_modules\node-fetch\lib'
+
+Import trace for requested module:
+./node_modules/node-fetch/lib/index.js
+./node_modules/@firebase/auth/dist/node-esm/index.js
+./node_modules/firebase/auth/dist/index.mjs
+./src/app/login/page.js
+
+
+[info] info  - Linting and checking validity of types...
+
+[info] 
+./src/app/admin/brand/page.js
+134:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+134:17  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/app/admin/layout.js
+24:8  Warning: React Hook useEffect has missing dependencies: 'children' and 'push'. Either include them or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/blog/page.js
+44:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+44:9  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+97:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+97:9  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/app/blog/[slug]/page.js
+46:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+46:13  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/app/contact/page.js
+27:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+27:9  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/app/layout.js
+38:13  Warning: Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+
+./src/app/page.js
+67:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+67:9  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/app/solutions/business/page.js
+31:319  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+31:319  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+39:321  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+39:321  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+47:289  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+47:289  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+53:18  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+53:18  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+54:18  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+54:18  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+55:18  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+55:18  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/app/solutions/it/page.js
+33:331  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+33:331  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+41:320  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+41:320  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+49:296  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+49:296  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+55:18  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+55:18  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+56:18  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+56:18  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+57:18  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+57:18  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/app/solutions/page.js
+34:350  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+34:350  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+43:344  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+43:344  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+51:310  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+51:310  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+57:18  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+57:18  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+58:18  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+58:18  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+59:18  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+59:18  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/components/AdminCard.js
+8:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/AdminPortoCard.js
+8:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/BlogCard.js
+8:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/BlogCardLS.js
+6:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/Card.js
+7:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/CarouselTemplate.js
+19:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+19:9  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/components/Footer.js
+71:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+82:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+82:19  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+94:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+94:19  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+106:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+106:19  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+121:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+132:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+132:19  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+144:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+144:19  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+156:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+156:19  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+171:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+182:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+182:19  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+194:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+194:19  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/components/Navbar.js
+13:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/PortoCard.js
+6:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+6:9  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/components/ProfilCard.js
+5:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+5:13  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/components/Slide.js
+22:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+22:17  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[info] info  - Collecting page data...
+
+[info] info  - Generating static pages (0/15)
+
+[info] info  - Generating static pages (3/15)
+
+[info] info  - Generating static pages (7/15)
+
+[info] uxNv4xc7RrsaJpNiyEmp  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner5.png?alt=media&token=17c7043f-901d-4a49-a771-4e55375e2c5d',
+  date: '3 November 2023'
+}
+
+[info] uEqrn5fRTOo2tD3kBjFa  =>  {
+  date: '3 November 2023',
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner2.png?alt=media&token=2377e987-c01a-484a-96cb-f01a9116b7c5'
+}
+sYYg2JhPPe9I8vHHejvg  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Framen.png?alt=media&token=6181796b-0bbb-4431-b762-7734a6ae2ba0',
+  date: '3 November 2023'
+}
+odN5K7lbb3plMmHvszjU  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner3.png?alt=media&token=bbec8a55-50b2-4e57-b63f-4b18a48c4f77',
+  date: '3 November 2023'
+}
+hOLYcZgWchU2rImpC836  =>  {
+  date: '3 November 2023',
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner4.png?alt=media&token=e931c5e5-030c-4004-b98e-47d0457ec387'
+}
+4a8z6CEoXPb9bO70yfnf  =>  {
+  date: '3 November 2023',
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner1.png?alt=media&token=a9048d84-1a3c-4b33-a1fd-ba9bd980c180'
+}
+
+[info] uxNv4xc7RrsaJpNiyEmp  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner5.png?alt=media&token=17c7043f-901d-4a49-a771-4e55375e2c5d',
+  date: '3 November 2023'
+}
+
+[info] uEqrn5fRTOo2tD3kBjFa  =>  {
+  date: '3 November 2023',
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner2.png?alt=media&token=2377e987-c01a-484a-96cb-f01a9116b7c5'
+}
+sYYg2JhPPe9I8vHHejvg  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Framen.png?alt=media&token=6181796b-0bbb-4431-b762-7734a6ae2ba0',
+  date: '3 November 2023'
+}
+
+[info] odN5K7lbb3plMmHvszjU  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner3.png?alt=media&token=bbec8a55-50b2-4e57-b63f-4b18a48c4f77',
+  date: '3 November 2023'
+}
+hOLYcZgWchU2rImpC836  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner4.png?alt=media&token=e931c5e5-030c-4004-b98e-47d0457ec387',
+  date: '3 November 2023'
+}
+4a8z6CEoXPb9bO70yfnf  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/brand%2Fpartner1.png?alt=media&token=a9048d84-1a3c-4b33-a1fd-ba9bd980c180',
+  date: '3 November 2023'
+}
+
+[info] info  - Generating static pages (11/15)
+
+[info] fYGM4afYJiLVi1L24Mwf  =>  {
+  description: 'yo00099',
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/porto%2Flogo-full.png?alt=media&token=d4f5abd7-4851-471c-90c5-c07e07cabaf8',
+  title: 'tes 2222',
+  date: '3 November 2023'
+}
+
+[info] d6QofOwVPGL2fXfiVreB  =>  {
+  description: 'desss',
+  date: '3 November 2023',
+  title: 'halooo',
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/porto%2Fprofil.jpeg?alt=media&token=2f58a82c-9ce6-4f53-a364-ca09317cdfdf'
+}
+
+[info] fYGM4afYJiLVi1L24Mwf  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/porto%2Flogo-full.png?alt=media&token=d4f5abd7-4851-471c-90c5-c07e07cabaf8',
+  description: 'yo00099',
+  date: '3 November 2023',
+  title: 'tes 2222'
+}
+
+[info] d6QofOwVPGL2fXfiVreB  =>  {
+  img: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/porto%2Fprofil.jpeg?alt=media&token=2f58a82c-9ce6-4f53-a364-ca09317cdfdf',
+  description: 'desss',
+  date: '3 November 2023',
+  title: 'halooo'
+}
+
+[info] info  - Generating static pages (15/15)
+
+[info] info  - Finalizing page optimization...
+
+[info] 
+
+[info] Route (app)                                Size     First Load JS
+┌ ○ /                                      1.1 kB          118 kB
+├ ○ /about                                 172 B          82.8 kB
+├ ○ /admin                                 846 B           191 kB
+├ ○ /admin/blog                            1.74 kB         204 kB
+├ λ /admin/blog/[id]                       1.45 kB         192 kB
+├ ○ /admin/brand                           1.41 kB         198 kB
+├ λ /admin/brand/[id]                      1.08 kB          78 kB
+├ ○ /admin/portofolio                      1.74 kB         204 kB
+├ λ /admin/portofolio/[id]                 1.35 kB         191 kB
+├ ○ /blog                                  820 B           118 kB
+├ λ /blog/[slug]                           186 B          87.5 kB
+├ ○ /contact                               1.28 kB         112 kB
+├ ○ /login                                 979 B           191 kB
+├ ○ /portofolio                            137 B          77.1 kB
+├ ○ /solutions                             2.03 kB        84.6 kB
+├ ○ /solutions/business                    1.74 kB        84.3 kB
+└ ○ /solutions/it                          1.8 kB         84.4 kB
++ First Load JS shared by all              76.9 kB
+  ├ chunks/139-c5037ea90659c715.js         24.4 kB
+  ├ chunks/2443530c-ed1c95c6c1aa9754.js    50.5 kB
+  ├ chunks/main-app-3d7ef6072b034195.js    215 B
+  └ chunks/webpack-92755bab580a8926.js     1.77 kB
+
+Route (pages)                              Size     First Load JS
+─ ○ /404                                   178 B          86.1 kB
++ First Load JS shared by all              85.9 kB
+  ├ chunks/main-778fc0ef79220a39.js        84 kB
+  ├ chunks/pages/_app-c544d6df833bfd4a.js  192 B
+  └ chunks/webpack-92755bab580a8926.js     1.77 kB
+
+
+[info] λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • non-static component /blog/[slug]/page
+[info]  • non-static component /admin/portofolio/[id]/page
+[info]  • non-static component /admin/brand/[id]/page
+[info]  • non-static component /admin/blog/[id]/page
+[info] 
+[debug] [2023-11-03T07:28:41.429Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "asia-east1"
+      },
+      "site": "saptaloka-web",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssrsaptalokaweb",
+            "region": "asia-east1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoic2FwdGFsb2thLXdlYiIsImFwcElkIjoiMTo0Nzc0OTI0ODU1MzY6d2ViOjY4ZDE0MTA3MjBmMWM5MzFjMGQ4YzUiLCJzdG9yYWdlQnVja2V0Ijoic2FwdGFsb2thLXdlYi5hcHBzcG90LmNvbSIsImxvY2F0aW9uSWQiOiJhc2lhLXNvdXRoZWFzdDIiLCJhcGlLZXkiOiJBSXphU3lDV1ZURXJfSHBrb1ZYdnpiaWhoaE9raFN6ZUgwWl9JM00iLCJhdXRoRG9tYWluIjoic2FwdGFsb2thLXdlYi5maXJlYmFzZWFwcC5jb20iLCJtZXNzYWdpbmdTZW5kZXJJZCI6IjQ3NzQ5MjQ4NTUzNiJ9LCJfYXV0aFRva2VuU3luY1VSTCI6Ii9fX3Nlc3Npb24ifQ; SameSite=Strict; Expires=2025-09-27T18:08:41.428Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase\\saptaloka-web\\hosting",
+      "webFramework": "next_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase\\saptaloka-web\\functions",
+      "codebase": "firebase-frameworks-saptaloka-web"
+    }
+  ]
+}
+[debug] [2023-11-03T07:28:41.431Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-03T07:28:41.431Z] > authorizing via signed-in user (saptalokadigital@gmail.com)
+[debug] [2023-11-03T07:28:41.432Z] [iam] checking project saptaloka-web for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-11-03T07:28:41.432Z] > refreshing access token with scopes: []
+[debug] [2023-11-03T07:28:41.434Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-03T07:28:41.434Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-03T07:28:41.699Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-11-03T07:28:41.699Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-03T07:28:41.719Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions [none]
+[debug] [2023-11-03T07:28:41.719Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:28:41.719Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-11-03T07:28:42.829Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions 200
+[debug] [2023-11-03T07:28:42.830Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'saptaloka-web'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-11-03T07:28:42.835Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web [none]
+[debug] [2023-11-03T07:28:43.304Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web 200
+[debug] [2023-11-03T07:28:43.304Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web {"projectId":"saptaloka-web","projectNumber":"477492485536","displayName":"saptaloka-web","name":"projects/saptaloka-web","resources":{"hostingSite":"saptaloka-web","storageBucket":"saptaloka-web.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_9cd8501b-d593-4701-9941-8d664fca6d7b"}
+[info] i  functions: preparing codebase firebase-frameworks-saptaloka-web for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-11-03T07:28:43.309Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-11-03T07:28:43.309Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:28:43.312Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-11-03T07:28:43.312Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:28:43.314Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/cloudbuild.googleapis.com [none]
+[debug] [2023-11-03T07:28:43.314Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/cloudbuild.googleapis.com x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:28:43.315Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/artifactregistry.googleapis.com [none]
+[debug] [2023-11-03T07:28:43.316Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/artifactregistry.googleapis.com x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:28:44.894Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/cloudbuild.googleapis.com 200
+[debug] [2023-11-03T07:28:44.894Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-11-03T07:28:44.948Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/artifactregistry.googleapis.com 200
+[debug] [2023-11-03T07:28:44.948Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-11-03T07:28:44.950Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/runtimeconfig.googleapis.com 200
+[debug] [2023-11-03T07:28:44.950Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-11-03T07:28:45.035Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/cloudfunctions.googleapis.com 200
+[debug] [2023-11-03T07:28:45.035Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-11-03T07:28:45.037Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web/adminSdkConfig [none]
+[debug] [2023-11-03T07:28:45.491Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web/adminSdkConfig 200
+[debug] [2023-11-03T07:28:45.491Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web/adminSdkConfig {"projectId":"saptaloka-web","storageBucket":"saptaloka-web.appspot.com","locationId":"asia-southeast2"}
+[debug] [2023-11-03T07:28:45.491Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/saptaloka-web/configs [none]
+[debug] [2023-11-03T07:28:45.978Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/saptaloka-web/configs 200
+[debug] [2023-11-03T07:28:45.979Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/saptaloka-web/configs {}
+[debug] [2023-11-03T07:28:45.981Z] Validating nodejs source
+[debug] [2023-11-03T07:28:47.831Z] > [functions] package.json contents: {
+  "name": "websaptaloka",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "10.4.14",
+    "cross-env": "^7.0.3",
+    "date-fns": "^2.30.0",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.4.0",
+    "firebase": "^9.23.0",
+    "flowbite": "^1.6.5",
+    "flowbite-react": "^0.4.4",
+    "next": "13.4.0",
+    "nextjs": "^0.0.3",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.7",
+    "tailwindcss": "3.3.2",
+    "firebase-frameworks": "^0.10.4",
+    "firebase-functions": "^4.3.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2023-11-03T07:28:47.831Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-saptaloka-web to determine what to deploy 
+[debug] [2023-11-03T07:28:47.832Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-11-03T07:28:47.852Z] Found firebase-functions binary at 'C:\Users\ramah\Documents\Project_Saptaloka\saptalokaweb\.firebase\saptaloka-web\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8235
+
+[debug] [2023-11-03T07:28:48.714Z] Got response from /__/functions.yaml {"endpoints":{"ssrsaptalokaweb":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-east1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrsaptalokaweb"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase\saptaloka-web\functions directory for uploading... 
+[info] i  functions: packaged C:\Users\ramah\Documents\Project_Saptaloka\saptalokaweb\.firebase\saptaloka-web\functions (459.58 MB) for uploading 
+[debug] [2023-11-03T07:29:23.253Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/saptaloka-web/locations/-/functions [none]
+[debug] [2023-11-03T07:29:23.991Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/saptaloka-web/locations/-/functions 200
+[debug] [2023-11-03T07:29:23.991Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/saptaloka-web/locations/-/functions {}
+[debug] [2023-11-03T07:29:23.992Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/saptaloka-web/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-11-03T07:29:24.919Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/saptaloka-web/locations/-/functions 200
+[debug] [2023-11-03T07:29:24.919Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/saptaloka-web/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-11-03T07:29:24.934Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/run.googleapis.com [none]
+[debug] [2023-11-03T07:29:24.934Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/run.googleapis.com x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:29:24.936Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/eventarc.googleapis.com [none]
+[debug] [2023-11-03T07:29:24.937Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/eventarc.googleapis.com x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:29:24.939Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/pubsub.googleapis.com [none]
+[debug] [2023-11-03T07:29:24.939Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/pubsub.googleapis.com x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:29:24.940Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/storage.googleapis.com [none]
+[debug] [2023-11-03T07:29:24.941Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/storage.googleapis.com x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:29:26.476Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/pubsub.googleapis.com 200
+[debug] [2023-11-03T07:29:26.476Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-11-03T07:29:26.561Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/storage.googleapis.com 200
+[debug] [2023-11-03T07:29:26.561Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-11-03T07:29:26.624Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/run.googleapis.com 200
+[debug] [2023-11-03T07:29:26.624Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2023-11-03T07:29:26.638Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/eventarc.googleapis.com 200
+[debug] [2023-11-03T07:29:26.638Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/saptaloka-web/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-11-03T07:29:26.641Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/477492485536/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-11-03T07:29:26.642Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/477492485536/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-11-03T07:29:28.451Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/477492485536/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-11-03T07:29:28.451Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/477492485536/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-477492485536@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"112572120125299930049"}}
+[debug] [2023-11-03T07:29:28.561Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/477492485536/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-11-03T07:29:28.561Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/477492485536/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-477492485536@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"112888144628601743350"}}
+[debug] [2023-11-03T07:29:28.575Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web [none]
+[debug] [2023-11-03T07:29:29.064Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web 200
+[debug] [2023-11-03T07:29:29.065Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/saptaloka-web {"projectId":"saptaloka-web","projectNumber":"477492485536","displayName":"saptaloka-web","name":"projects/saptaloka-web","resources":{"hostingSite":"saptaloka-web","storageBucket":"saptaloka-web.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_9cd8501b-d593-4701-9941-8d664fca6d7b"}
+[debug] [2023-11-03T07:29:29.073Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/saptaloka-web/versions [none]
+[debug] [2023-11-03T07:29:29.073Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/saptaloka-web/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-11-03T07:29:30.267Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/saptaloka-web/versions 200
+[debug] [2023-11-03T07:29:30.267Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/saptaloka-web/versions {"name":"projects/477492485536/sites/saptaloka-web/versions/22c6691c9a7c4a15","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-11-03T07:29:30.268Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-11-03T07:29:30.268Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions [none]
+[debug] [2023-11-03T07:29:30.268Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions x-goog-quota-user=projects/saptaloka-web
+[debug] [2023-11-03T07:29:30.268Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-11-03T07:29:31.392Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions 200
+[debug] [2023-11-03T07:29:31.392Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saptaloka-web:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-11-03T07:29:31.392Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-11-03T07:29:31.393Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/saptaloka-web/locations/asia-east1/functions:generateUploadUrl [none]
+[debug] [2023-11-03T07:29:31.995Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/saptaloka-web/locations/asia-east1/functions:generateUploadUrl 200
+[debug] [2023-11-03T07:29:31.995Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/saptaloka-web/locations/asia-east1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-477492485536-asia-east1/7353d810-0ac8-4939-8882-1a3d24b49167.zip?GoogleAccessId=service-477492485536@gcf-admin-robot.iam.gserviceaccount.com&Expires=1698998371&Signature=sf8xyAtGXpZLgfSRCGsoeAQ%2BuqKWSjHPc4ISP3JBudY0K4RtaUIq2IDqERDAK3pNB3%2BgqBxBJWsYYwYl8u7spDrMgGvXzu%2BsxP6l8neUARAHNEGCLqiiI2nxM2VGi%2F%2FNYS8CpyWCIdWhEeJQJujdn%2Fwx8uMM3vmlICzI22KXczHDEVtanhyRbceVzdFwB%2FXZ5%2BqnIgepR%2FCiP3vgyOarFwNJGiFG91V20tsXKElnjiSD4cKLOlNEP1%2BW54ItidKX5D3I42Zfr69huOl30arPNEceA5O%2B%2FkpS2Md%2BlNy%2F9F0Ri2w5ij7%2FguGv6uOWd%2BKkz9Q9LDmNTHSZci0FF6OXkA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-477492485536-asia-east1","object":"7353d810-0ac8-4939-8882-1a3d24b49167.zip"}}
+[debug] [2023-11-03T07:29:31.996Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-477492485536-asia-east1/7353d810-0ac8-4939-8882-1a3d24b49167.zip GoogleAccessId=service-477492485536%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1698998371&Signature=sf8xyAtGXpZLgfSRCGsoeAQ%2BuqKWSjHPc4ISP3JBudY0K4RtaUIq2IDqERDAK3pNB3%2BgqBxBJWsYYwYl8u7spDrMgGvXzu%2BsxP6l8neUARAHNEGCLqiiI2nxM2VGi%2F%2FNYS8CpyWCIdWhEeJQJujdn%2Fwx8uMM3vmlICzI22KXczHDEVtanhyRbceVzdFwB%2FXZ5%2BqnIgepR%2FCiP3vgyOarFwNJGiFG91V20tsXKElnjiSD4cKLOlNEP1%2BW54ItidKX5D3I42Zfr69huOl30arPNEceA5O%2B%2FkpS2Md%2BlNy%2F9F0Ri2w5ij7%2FguGv6uOWd%2BKkz9Q9LDmNTHSZci0FF6OXkA%3D%3D
+[debug] [2023-11-03T07:29:31.996Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-477492485536-asia-east1/7353d810-0ac8-4939-8882-1a3d24b49167.zip [stream]
