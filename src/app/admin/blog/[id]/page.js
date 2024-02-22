@@ -124,44 +124,54 @@ export default function BlogDetail({ params }) {
 
     return (
         <>
+            <div className="w-7/12 m-auto flex justify-between text-center md:mb-4 sm:mb-4 mb-3 md:mt-20 sm:mt-16 mt-5  font-bold ">
+                <a href="/admin/blog" className="h-full p-3 bg-blue-500 hover:bg-blue-400 text-white rounded-md">BACK</a>
 
-            <h1 className="text-center md:mb-20 sm:mb-16 mb-5 md:mt-20 sm:mt-16 mt-5 text-3xl font-bold text-sky-500">Detail blog</h1>
+                <h1 className="text-3xl text-sky-500">DETAIL BLOG</h1>
+                <div className="h-full p-3 bg-red-300 opacity-0">BACK</div>
+            </div>
 
-            <div className="border-2 rounded-lg w-7/12 m-auto">
-                <h1 className="text-center font-bold text-sky-500 text-2xl mt-24 md:mb-14 sm:mb-10 mb-10">BLOG</h1>
+            <div className="bg-blue-100 rounded-lg w-7/12 m-auto p-6">
                 <form method="POST">
-                    <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Title</h1>
-                        <input name="title" className="mx-auto" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+                    <p className="text-xl font-bold mb-2 text-sky-500">DETAIL</p>
+                    <div className=" grid grid-cols-1">
+                        <h1 className="text-start text-lg font-bold">Title</h1>
+                        <input name="title" className="w-full rounded-md" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
                     </div>
                     <br />
-                    <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Description</h1>
-                        <input name="description" className="mx-auto" type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
+                    <div className=" grid grid-cols-1">
+                        <h1 className="text-start text-lg font-bold">Description</h1>
+                        <textarea rows={5} name="description" className="w-full rounded-md" type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
                     </div>
                     <br />
-                    <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Author</h1>
-                        <input name="author" className="mx-auto" type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
+                    <div className=" grid grid-cols-1">
+                        <h1 className="text-start text-lg font-bold">Author</h1>
+                        <input name="author" className="w-full rounded-md" type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
                     </div>
                     <br />
-                    <br />
-                    <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">category</h1>
-                        <input name="category" className="mx-auto" type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
+                    <div className="grid grid-cols-1">
+                        <h1 className="text-start text-lg font-bold">Category</h1>
+                        <select name="category" className="w-full rounded-md" onChange={(e) => setCategory(e.target.value)}>
+                            <option value="value1">Option 1</option>
+                            <option value="value2">Option 2</option>
+                        </select>
                     </div>
                     <br />
-                    <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Image</h1>
-                        <input className="mx-auto" type="file" onChange={(event) => handleUpload(event.target.files[0])} />
+                    <div className=" grid grid-cols-1">
+                        <h1 className="text-start text-lg font-bold">Image</h1>
+                        <div className="w-full rounded-md bg-white border border-slate-600 flex justify-center py-5">
+
+                            <input className='rounded-md bg-slate-200' type="file" onChange={(event) => handleUpload(event.target.files[0])} />
+                        </div>
                     </div>
+
                     <br />
 
                     <div className="my-1 grid grid-cols-1">
                         {loading ? (
                             <p>Loading</p>
                         ) : (
-                            <button onClick={(e) => editData(e, id)} className="mx-auto mt-5 text-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2"> update</button>
+                            <button onClick={(e) => editData(e, id)} className="w-full mt-5 text-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2 font-semibold"> UPDATE BLOG</button>
                         )}
 
                     </div>
@@ -178,11 +188,13 @@ export default function BlogDetail({ params }) {
                             } catch (error) {
                                 alert("An error occured", error);
                             }
-                        }} className="mx-auto mb-5 ext-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2"> delete</button>
+                        }} className="w-full mt-5 text-lg border-2 text-white rounded-lg bg-red-500 px-5 py-2 font-semibold"> DELETE BLOG</button>
                     </div>
 
                 </form>
             </div>
+            <br />
+            <br />
         </>
     )
 }
