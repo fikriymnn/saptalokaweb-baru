@@ -41,18 +41,20 @@ export default async function portofolio() {
           </h5>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 grid-cols-1 justify-items-center">
-        {/* DINAMIS PORTOFOLIO CARD */}
-        {porto.map((data, i) => {
-          return (
-            <PortoCard
-              key={i}
-              src={data.img}
-              title={data.title}
-              desc={data.description}
-            />
-          );
-        })}
+      <div className="flex justify-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-16 justify-evenly my-16">
+          {/* DINAMIS PORTOFOLIO CARD */}
+          {porto.map((data, i) => {
+            return (
+              <PortoCard
+                key={i}
+                src={data.img}
+                title={data.title}
+                desc={data.description}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );
