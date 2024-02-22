@@ -100,23 +100,32 @@ export default function Brand() {
   return (
     <>
 
-      <h1 className="text-center md:mb-20 sm:mb-16 mb-5 md:mt-20 sm:mt-16 mt-5 text-3xl font-bold text-sky-500">Brand</h1>
+      <div className="w-7/12 m-auto flex justify-between text-center md:mb-4 sm:mb-4 mb-3 md:mt-20 sm:mt-16 mt-5  font-bold ">
+        <a href="/admin" className="h-full p-3 bg-blue-500 hover:bg-blue-400 text-white rounded-md">BACK</a>
 
-      <div className="border-2 rounded-lg w-7/12 m-auto">
-        <h1 className="text-center font-bold text-sky-500 text-2xl mt-24 md:mb-14 sm:mb-10 mb-10">Tambah Brand</h1>
+        <h1 className="text-3xl text-sky-500">BRAND</h1>
+        <div className="h-full p-3 bg-red-300 opacity-0">BACK</div>
+      </div>
+
+      <div className="bg-blue-100 rounded-lg w-7/12 m-auto p-6">
+        <p className="text-xl font-bold mb-2 text-sky-500">ADD BRAND</p>
         <form onSubmit={addData} method="POST">
+          <div className=" grid grid-cols-1">
+            <h1 className="text-start text-lg font-bold">Brand Symbol</h1>
+            <div className="w-full rounded-md bg-white border border-slate-600 flex justify-center py-5">
 
-          <div className="my-2 grid grid-cols-1">
-            <h1 className="text-center text-lg font-bold">Logo</h1>
-            <input className="mx-auto" type="file" onChange={(event) => handleUpload(event.target.files[0])} />
+              <input className="mx-auto" type="file" onChange={(event) => handleUpload(event.target.files[0])} />
+            </div>
           </div>
+
+
           <br />
 
           <div className="my-1 grid grid-cols-1">
             {loading ? (
               <p>Loading</p>
             ) : (
-              <button className="mx-auto my-10 text-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2"> submit</button>
+              <button className="w-full font-semibold text-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2"> ADD BRAND</button>
             )}
           </div>
 
@@ -126,11 +135,13 @@ export default function Brand() {
       <br />
       <br />
       <br />
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-items-center mb-20">
+      <h1 className="text-3xl text-sky-500 text-center
+font-bold ">ADDED BRAND</h1>
+      <div className="grid md:grid-cols-3 md:mx-10 mx-3 sm:grid-cols-2 grid-cols-1 justify-items-center mb-20 bg-blue-100 rounded-lg m-auto p-6 mt-3 gap-5">
         {
           brand.map((data, i) => {
             return (
-              <div key={i} className="flex flex-col">
+              <div key={i} className="flex flex-col bg-white rounded-md">
                 <img src={data.img} className="w-48 h-28 md:w-[400px] md:h-[240px]" />
                 <button onClick={async (e) => {
                   try {
@@ -144,7 +155,7 @@ export default function Brand() {
                   } catch (error) {
                     alert("An error occured", error);
                   }
-                }} className="mx-auto my-10 text-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2"> delete</button>
+                }} className="mx-auto w-full text-lg  text-white rounded-b-lg bg-red-500 px-5 py-2"> DELETE</button>
               </div>
             )
           })
