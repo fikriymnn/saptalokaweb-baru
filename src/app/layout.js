@@ -1,7 +1,7 @@
-import Head from "next/head"
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
-import './globals.css'
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import "./globals.css";
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -20,32 +20,34 @@ import { initializeApp } from "firebase/app";
 // const app = initializeApp(firebaseConfig);
 
 export const metadata = {
-  title: 'Saptaloka Digital',
-  description:
-    'PT Saptaloka Digital Indonesia',
+  title: "Saptaloka Digital",
+  description: "PT Saptaloka Digital Indonesia",
   icons: {
-    icon: '/images/logo/saptaloka_logo/saptaloka.png',
+    icon: "/images/logo/saptaloka_logo/saptaloka.png",
   },
 };
 
-export default function RootLayout({ children}) {
-    return (
-       <html lang="en">
-         <Head>
-            {/* <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" /> */}
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-            <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
-            <link rel="icon" href="/images/logo/saptaloka_logo/saptaloka.png" />
-        </Head>
-         <body>
-         <Navbar/>
-         <div className="md:mt-20 sm:mt-16 mt-16">
-         {children}     
-         </div>
-         
-         <Footer/>
-         </body>
-       </html>
-     )
-   }
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <Head>
+        {/* <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" /> */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="icon" href="/images/logo/saptaloka_logo/saptaloka.png" />
+      </Head>
+      <body>
+        <Navbar />
+        <div className="md:mt-20 sm:mt-16 mt-16">{children}</div>
+
+        <Footer />
+      </body>
+    </html>
+  );
+}
+
+export const revalidate = 3;

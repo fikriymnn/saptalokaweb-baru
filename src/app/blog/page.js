@@ -1,24 +1,94 @@
 import BlogCard from "@/components/BlogCard";
 import CarouselBlog from "@/components/CarouselBlog";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  where,
+  query,
+  getDoc,
+  deleteDoc,
+  updateDoc,
+  doc,
+  Firestore,
+  orderBy,
+  limit,
+} from "firebase/firestore";
+import { db, storage } from "../../../firebase/firebase";
 
-// async function getDataBlogStory() {
-//   const res = await fetch(
-//     `${process.env.NEXT_PUBLIC_URL}/api/blogs?populate=image&filters[category][$eq]=story&pagination[start]=0&pagination[limit]=3&sort=id:desc`,{ cache: "no-store" }
-//   );
-//   return res.json();
-// }
+async function getDataBlogStory() {
+  let data = [];
+  try {
+    const ordersRef = collection(db, "blog");
+    const q = query(
+      ordersRef,
+      where("category", "==", "Story"),
+      orderBy("date", "desc"),
+      limit(4)
+    );
+    const querySnapshot = await getDocs(q);
 
-// async function getDataBlogTutorial() {
-//   const res = await fetch(
-//     `${process.env.NEXT_PUBLIC_URL}/api/blogs?populate=image&filters[category][$eq]=tutorial&pagination[start]=0&pagination[limit]=3&sort=id:desc`,{ cache: "no-store" }
-//   );
-//   return res.json();
-// }
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+
+      data.push({ ...doc.data(), id: doc.id });
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  return data;
+}
+
+async function getDataBlogTutorial() {
+  let data = [];
+  try {
+    const ordersRef = collection(db, "blog");
+    const q = query(
+      ordersRef,
+      where("category", "==", "Tutorial"),
+      orderBy("date", "desc"),
+      limit(4)
+    );
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+
+      data.push({ ...doc.data(), id: doc.id });
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  return data;
+}
+
+async function getDataBlog() {
+  let data = [];
+  try {
+    const ordersRef = collection(db, "blog");
+    const q = query(
+      ordersRef,
+
+      orderBy("date", "desc"),
+      limit(3)
+    );
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+
+      data.push({ ...doc.data(), id: doc.id });
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  return data;
+}
 
 export default async function Blog() {
-  // const dataBlogStory = await getDataBlogStory();
-  // const dataBlogTutorial = await getDataBlogTutorial();
-  
+  const dataBlogStory = await getDataBlogStory();
+  const dataBlogTutorial = await getDataBlogTutorial();
+  const dataBlog = await getDataBlog();
 
   return (
     <div className="w-full items-center">
@@ -37,7 +107,7 @@ export default async function Blog() {
           RECENT POST
         </h1>
         {/* DINAMIS DI COMPONENT CAROUSEL BLOG , 4 BLOG TERBARU CATEGORY (CAMPUR)*/}
-        <CarouselBlog />
+        <CarouselBlog dataBlog={dataBlog} />
       </div>
       <br />
       <div className="w-full grid grid-cols-2 md:flex">
@@ -48,50 +118,34 @@ export default async function Blog() {
         <div className="overflow-auto w-full">
           <div className="flex flex-nowrap justify-evenly md:w-full w-[640px] md:h-auto col-start-2 content-center">
             {/* DINAMIS 4 BLOG TERBARU KATEGORI STORY  */}
-          <BlogCard
-                  image={'/images/news/recent/cblog.png'}
-                  title={"Informatika pada sehari hari"}
-                  slug={'/informatika'}
-                  
-                />
+            {dataBlogStory.map((data, i) => {
+              return (
                 <BlogCard
-                  image={'/images/news/recent/cblog.png'}
-                  title={"Informatika pada sehari hari"}
-                  slug={'/informatika'}
-                  
+                  key={i}
+                  image={data.img}
+                  title={data.title}
+                  slug={"/" + data.id}
                 />
-                <BlogCard
-                  image={'/images/news/recent/cblog.png'}
-                  title={"Informatika pada sehari hari"}
-                  slug={'/informatika'}
-                  
-                />
+              );
+            })}
           </div>
         </div>
       </div>
-      
+
       <div className="bg-cover w-full grid grid-cols-2 md:flex">
         <div className="overflow-auto w-full">
           <div className="flex flex-nowrap flex-row-reverse justify-evenly md:w-full md:h-auto w-[640px] col-start-1 content-center">
-          {/* DINAMIS 3 BLOG TERBARU KATEGORI TUTORIAL  */}
-          <BlogCard
-                  image={'/images/news/recent/cblog.png'}
-                  title={"Informatika pada sehari hari"}
-                  slug={'/informatika'}
-                  
-                />
+            {/* DINAMIS 3 BLOG TERBARU KATEGORI TUTORIAL  */}
+            {dataBlogTutorial.map((data, i) => {
+              return (
                 <BlogCard
-                  image={'/images/news/recent/cblog.png'}
-                  title={"Informatika pada sehari hari"}
-                  slug={'/informatika'}
-                  
+                  key={i}
+                  image={data.img}
+                  title={data.title}
+                  slug={"/" + data.id}
                 />
-                <BlogCard
-                  image={'/images/news/recent/cblog.png'}
-                  title={"Informatika pada sehari hari"}
-                  slug={'/informatika'}
-                  
-                />
+              );
+            })}
           </div>
         </div>
         <img

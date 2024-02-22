@@ -1,4 +1,4 @@
-import PortoCard from "@/components/PortoCard"
+import PortoCard from "@/components/PortoCard";
 import { db, storage } from "../../../firebase/firebase";
 import {
   collection,
@@ -6,13 +6,8 @@ import {
   getDocs,
   orderBy,
   query,
-
 } from "firebase/firestore";
-import {
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from "firebase/storage";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 async function getdataPorto() {
   let data = [];
@@ -21,13 +16,11 @@ async function getdataPorto() {
     const q = query(ordersRef, orderBy("date", "desc"));
     const querySnapshot = await getDocs(q);
 
-
     querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
+
       data.push({ ...doc.data(), id: doc.id });
     });
-
   } catch (error) {
     alert(error);
   }
@@ -50,14 +43,17 @@ export default async function portofolio() {
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 justify-items-center">
         {/* DINAMIS PORTOFOLIO CARD */}
-        {
-          porto.map((data, i) => {
-            return <PortoCard key={i} src={data.img} title={data.title} desc={data.description} />
-          })
-        }
-
-
+        {porto.map((data, i) => {
+          return (
+            <PortoCard
+              key={i}
+              src={data.img}
+              title={data.title}
+              desc={data.description}
+            />
+          );
+        })}
       </div>
     </>
-  )
+  );
 }
