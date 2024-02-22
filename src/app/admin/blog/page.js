@@ -115,30 +115,32 @@ export default function BlogAdmin() {
 
             <div className="border-2 rounded-lg w-7/12 m-auto">
                 <h1 className="text-center font-bold text-sky-500 text-2xl mt-24 md:mb-14 sm:mb-10 mb-10">Tambah blog</h1>
-                <form onSubmit={addData} method="POST">
+                <form onSubmit={addData} method="POST" className="px-5">
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Title</h1>
-                        <input name="title" className="mx-auto" type="text" onChange={(e) => setTitle(e.target.value)} />
+                        <h1 className=" text-lg font-bold">Title</h1>
+                        <input name="title" className="" type="text" onChange={(e) => setTitle(e.target.value)} />
                     </div>
                     <br />
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Description</h1>
-                        <input name="description" className="mx-auto" type="text" onChange={(e) => setDescription(e.target.value)} />
+                        <h1 className=" text-lg font-bold">Description</h1>
+                        <input name="description" className="" type="text" onChange={(e) => setDescription(e.target.value)} />
                     </div>
                     <br />
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">AUTHOR</h1>
-                        <input name="author" className="mx-auto" type="text" onChange={(e) => setAuthor(e.target.value)} />
+                        <h1 className=" text-lg font-bold">Author</h1>
+                        <input name="author" className="" type="text" onChange={(e) => setAuthor(e.target.value)} />
                     </div>
                     <br />
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">category</h1>
-                        <input name="category" className="mx-auto" type="text" onChange={(e) => setCategory(e.target.value)} />
+                        <h1 className=" text-lg font-bold">Category</h1>
+                        <input name="category" className="" type="text" onChange={(e) => setCategory(e.target.value)} />
+
                     </div>
+
                     <br />
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Image</h1>
-                        <input className="mx-auto" type="file" onChange={(event) => handleUpload(event.target.files[0])} />
+                        <h1 className=" text-lg font-bold">Image</h1>
+                        <input className="" type="file" onChange={(event) => handleUpload(event.target.files[0])} />
                     </div>
                     <br />
 

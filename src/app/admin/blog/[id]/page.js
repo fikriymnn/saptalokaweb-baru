@@ -128,32 +128,32 @@ export default function BlogDetail({ params }) {
             <h1 className="text-center md:mb-20 sm:mb-16 mb-5 md:mt-20 sm:mt-16 mt-5 text-3xl font-bold text-sky-500">Detail blog</h1>
 
             <div className="border-2 rounded-lg w-7/12 m-auto">
-                <h1 className="text-center font-bold text-sky-500 text-2xl mt-24 md:mb-14 sm:mb-10 mb-10">BLOG</h1>
+                <h1 className="text-center font-bold text-sky-500 text-2xl mt-24 md:mb-14 sm:mb-10 mb-10">BLOOG</h1>
                 <form method="POST">
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Title</h1>
-                        <input name="title" className="mx-auto" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+                        <h1 className=" text-lg font-bold">Titlee</h1>
+                        <input name="title" className="" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
                     </div>
                     <br />
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Description</h1>
-                        <input name="description" className="mx-auto" type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
+                        <h1 className=" text-lg font-bold">Description</h1>
+                        <input name="description" className="" type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
                     </div>
                     <br />
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Author</h1>
-                        <input name="author" className="mx-auto" type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
+                        <h1 className=" text-lg font-bold">Author</h1>
+                        <input name="author" className="" type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
                     </div>
                     <br />
                     <br />
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">category</h1>
-                        <input name="category" className="mx-auto" type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
+                        <h1 className=" text-lg font-bold">category</h1>
+                        <input name="category" className="" type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
                     </div>
                     <br />
                     <div className="my-2 grid grid-cols-1">
-                        <h1 className="text-center text-lg font-bold">Image</h1>
-                        <input className="mx-auto" type="file" onChange={(event) => handleUpload(event.target.files[0])} />
+                        <h1 className=" text-lg font-bold">Image</h1>
+                        <input className="" type="file" onChange={(event) => handleUpload(event.target.files[0])} />
                     </div>
                     <br />
 
@@ -161,7 +161,7 @@ export default function BlogDetail({ params }) {
                         {loading ? (
                             <p>Loading</p>
                         ) : (
-                            <button onClick={(e) => editData(e, id)} className="mx-auto mt-5 text-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2"> update</button>
+                            <button onClick={(e) => editData(e, id)} className=" mt-5 text-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2"> update</button>
                         )}
 
                     </div>
@@ -178,7 +178,7 @@ export default function BlogDetail({ params }) {
                             } catch (error) {
                                 alert("An error occured", error);
                             }
-                        }} className="mx-auto mb-5 ext-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2"> delete</button>
+                        }} className=" mb-5 ext-lg border-2 text-white rounded-lg bg-sky-500 px-5 py-2"> delete</button>
                     </div>
 
                 </form>
