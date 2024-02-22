@@ -7,9 +7,9 @@ export default function AdminCard({ image = "", title = "not found", id = "" }) 
             <Link href={`/admin/blog/${id}`} className="m-auto items-center text-center">
                 <img class="m-auto rounded-lg w-48 h-28 md:w-[400px] md:h-[240px]" src={image} alt="" />
             </Link>
-            <div class="md:p-4 p-3 text-center">
+            <div class=" mt-2text-center">
                 <Link href={`/admin/blog/${id}`}>
-                    <p class="text-sm md:text-2xl font-bold tracking-tight text-blue-600 hover:text-blue-800">{titl}</p>
+                    <p class="bg-white my-2 rounded-md w-full text-sm md:text-2xl font-bold tracking-tight text-blue-600 hover:text-blue-800">{titl}</p>
                 </Link>
             </div>
         </div>
