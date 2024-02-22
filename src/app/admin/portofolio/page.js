@@ -118,7 +118,8 @@ export default function PortofolioAdmin() {
                     <br />
                     <div className=" grid grid-cols-1">
                         <h1 className="text-start text-lg font-bold">Description</h1>
-                        <input
+                        <textarea
+                            rows={5}
                             name="description"
                             className="w-full rounded-md"
                             type="text"
@@ -149,7 +150,7 @@ export default function PortofolioAdmin() {
             <br />
             <br />
             <br />
-            <h1 className="text-center md:mb-4 sm:mb-4 mb-3 md:mt-20 sm:mt-16 mt-5 text-3xl font-bold text-sky-500">OUR BLOG</h1>
+            <h1 className="text-center md:mb-4 sm:mb-4 mb-3 md:mt-20 sm:mt-16 mt-5 text-3xl font-bold text-sky-500">OUR PORTOFOLIO</h1>
             <div className="px-10 w-full h-full">
 
                 <div className="grid md:grid-cols-3 bg-blue-100 rounded-md sm:grid-cols-2 grid-cols-1 justify-items-center mb-20 p-10">

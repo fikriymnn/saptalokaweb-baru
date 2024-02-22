@@ -152,8 +152,8 @@ export default function BlogDetail({ params }) {
                     <div className="grid grid-cols-1">
                         <h1 className="text-start text-lg font-bold">Category</h1>
                         <select name="category" className="w-full rounded-md" onChange={(e) => setCategory(e.target.value)}>
-                            <option value="value1">Option 1</option>
-                            <option value="value2">Option 2</option>
+                            <option value="Story">Story</option>
+                            <option value="Tutorial">Tutorial</option>
                         </select>
                     </div>
                     <br />
